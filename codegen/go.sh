@@ -5,7 +5,6 @@ SIMPLESWAP_ABI="$(cat artifacts/contracts/ERC20SimpleSwap.sol/ERC20SimpleSwap.js
 SIMPLESWAP_FACTORY_ABI="$(cat artifacts/contracts/SimpleSwapFactory.sol/SimpleSwapFactory.json | jq .abi)"
 SIMPLESWAP_FACTORY_BYTECODE="$(cat artifacts/contracts/SimpleSwapFactory.sol/SimpleSwapFactory.json | jq .bytecode)"
 
-mkdir -p "$TARGET"
 cat <<EOF
 // Copyright 2021 The Swarm Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style
