@@ -2,11 +2,10 @@ name: codegen
 
 on:
   push:
-    branches: 
-      - master
-  pull_request:
-    branches:
+    branches-ignore:
       - '**'
+    tags:
+      - 'v*.*.*'
 
 jobs:
   build:
@@ -41,7 +40,7 @@ jobs:
 
     - name: Commit files
       run: |
-        ./codegen/go.sh go/swap_abi_1.0.0.go
+        ./codegen/go.sh "go/swap_abi_${{ github.event.ref }}.go"
         cd go
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
