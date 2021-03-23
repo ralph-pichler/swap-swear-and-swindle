@@ -38,9 +38,13 @@ jobs:
         fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
         ref: master
 
+    - name: Get tag
+      id: tag
+      uses: dawidd6/action-get-tag@v1
+
     - name: Commit files
       run: |
-        ./codegen/go.sh "go/swap_abi_${{ github.event.ref }}.go"
+        ./codegen/go.sh "go/swap_abi_${{steps.tag.outputs.tag}}.go"
         cd go
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
