@@ -45,7 +45,7 @@ jobs:
     - name: Commit files
       run: |
         mkdir -p go/swapabi
-        ./codegen/go.sh "go/swapabi/abi_${{steps.tag.outputs.tag}}.go"
+        ./codegen/go.sh "go/swapabi/abi_${{steps.tag.outputs.tag}}.go" "${{steps.tag.outputs.tag}}"
         cd go
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
