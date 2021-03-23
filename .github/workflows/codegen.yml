@@ -41,10 +41,10 @@ jobs:
     - name: Commit files
       run: |
         ./codegen/go.sh > go/swap_abi_1.0.0.go
-        cd go
-        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git commit -m "Add changes" -a
+#        cd go
+#        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+#        git config --local user.name "github-actions[bot]"
+#        git commit -m "Add changes" -a
 #    - name: Push changes
 #      uses: ad-m/github-push-action@master
 #      with:
