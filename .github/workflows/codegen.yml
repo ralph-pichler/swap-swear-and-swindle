@@ -28,6 +28,9 @@ jobs:
     - name: Yarn install
       run: yarn install
 
+    - name: Yarn Compile
+      run: yarn compile
+
     - uses: actions/checkout@v2
       with:
         repository: ralph-pichler/swap-swear-and-swindle
