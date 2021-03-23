@@ -52,5 +52,5 @@ jobs:
       with:
         repository: ralph-pichler/gentest
         path: go
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GH_TOKEN }}
         branch: master
