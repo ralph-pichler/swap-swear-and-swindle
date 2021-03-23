@@ -41,7 +41,7 @@ jobs:
 
     - name: Commit files
       run: |
-        ./codegen/go.sh > go/swap_abi_1.0.0.go
+        ./codegen/go.sh | tee go/swap_abi_1.0.0.go
         cd go
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
