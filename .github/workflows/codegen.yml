@@ -51,6 +51,6 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         repository: ralph-pichler/gentest
-        path: go
+        directory: go
         github_token: ${{ secrets.GH_TOKEN }}
         branch: master
